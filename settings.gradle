@@ -3,4 +3,5 @@ rootProject.name = 'otus-homework'
 include 'hw01-gradle'
 include 'hw02-generic'
 include 'hw06-test-annotations'
+include 'hw10-atm'
 
