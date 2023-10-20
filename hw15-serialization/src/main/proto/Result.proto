@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package ru.bodikov.otus;
+option java_outer_classname = "ResultProto";
+//
+//import "com.fasterxml.jackson.annotation.JsonPropertyOrder";
+//import "lombok.*";
+//import "lombok.extern.jackson.Jacksonized";
+//import "ru.bodikov.otus.smsdto.ChatSession";
+//import "ru.bodikov.otus.smsdto.Member";
+//import "ru.bodikov.otus.smsdto.Message";
+//import "ru.bodikov.otus.smsdto.Sms";
+//
+//import "java.io.Serializable";
+//import "java.util.List";
+//import "java.util.Map";
+//import "java.util.Set";
+//import "java.util.TreeSet";
+//import "java.util.stream.Collectors";
+
+message Result{
+  map<string,ListOfSmsMessages> belongNumberToMessageMap = 1;
+}
+
+message ListOfSmsMessages{
+  repeated NewMessageStructure  message = 1;
+}
+
+message NewMessageStructure{
+  string chatIdentifier = 1;
+  string last = 2;
+  string belongNumber = 3;
+  string sendDate = 4;
+  string text = 5;
+}
